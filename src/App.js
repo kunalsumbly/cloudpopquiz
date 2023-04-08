@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 function Flashcards() {
     const [cards, setCards] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [flipped, setFlipped] = useState([]);
 
     useEffect(() => {
@@ -22,33 +21,26 @@ function Flashcards() {
         });
     }
 
-    function handleNextCard() {
-        setCurrentIndex((currentIndex + 1) % cards.length);
-    }
-
-    function handlePrevCard() {
-        setCurrentIndex((currentIndex + cards.length - 1) % cards.length);
-    }
-
     return (
         <div className="flashcards-container">
             {cards.length > 0 ? (
-                <div className="flashcard">
-                    <div
-                        className={`flashcard-inner ${
-                            flipped[currentIndex] ? 'flipped' : ''
-                        }`}
-                        onClick={() => handleFlip(currentIndex)}
-                    >
-                        <div className="flashcard-front">
-                            <div className="flashcard-text">{cards[currentIndex].question}</div>
-                        </div>
-                        <div className="flashcard-back">
-                            <div className="flashcard-text">{cards[currentIndex].answer}</div>
+                cards.map((card, index) => (
+                    <div key={index} className="flashcard">
+                        <div
+                            className={`flashcard-inner ${
+                                flipped[index] ? 'flipped' : ''
+                            }`}
+                            onClick={() => handleFlip(index)}
+                        >
+                            <div className="flashcard-front">
+                                <div className="flashcard-text">{card.question}</div>
+                            </div>
+                            <div className="flashcard-back">
+                                <div className="flashcard-text">{card.answer}</div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
+                ))
             ) : (
                 <div>Loading...</div>
             )}

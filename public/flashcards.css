@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
 }
 
@@ -11,6 +11,8 @@
     width: 300px;
     height: 200px;
     perspective: 1000px;
+    margin-bottom: 20px; /* add margin between cards */
+    padding: 20px; /* add padding inside each card */
 }
 
 .flashcard-inner {
@@ -37,7 +39,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+
 }
 
 .flashcard-front {
