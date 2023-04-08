@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question": "What is AWS Lambda?",
+    "answer": "AWS Lambda is a serverless compute service that lets you run your code without provisioning or managing servers."
+  },
+  {
+    "id": 2,
+    "question": "What is Amazon S3?",
+    "answer": "Amazon S3 is a highly scalable object storage service that allows you to store and retrieve data from anywhere on the web."
+  },
+  {
+    "id": 3,
+    "question": "What is Amazon EC2?",
+    "answer": "Amazon EC2 is a web service that provides resizable compute capacity in the cloud."
+  }
+]
