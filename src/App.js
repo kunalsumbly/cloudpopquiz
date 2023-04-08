@@ -47,10 +47,7 @@ function Flashcards() {
                             <div className="flashcard-text">{cards[currentIndex].answer}</div>
                         </div>
                     </div>
-                    <div className="buttons">
-                        <button onClick={handlePrevCard}>Prev</button>
-                        <button onClick={handleNextCard}>Next</button>
-                    </div>
+
                 </div>
             ) : (
                 <div>Loading...</div>
